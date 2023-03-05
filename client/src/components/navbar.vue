@@ -33,10 +33,6 @@
                       <li><a class="dropdown-item text-uppercase text-dark" >Something else here</a></li>
                     </ul>
                   </li>
-
-                <li class="nav-item px-2 py-2 border-0">
-                    <a class="nav-link text-uppercase text-dark">DEMO</a>
-                </li>
                 
                 <li class="nav-item px-2 py-2 border-0">
                     <a class="nav-link text-uppercase text-dark">VỀ CHÚNG TÔI</a>

@@ -1,7 +1,5 @@
 <template>
-
-    <p>clientsdsadsa sadsadas</p> 
-    
+     
     <router-view/>
 
 </template>

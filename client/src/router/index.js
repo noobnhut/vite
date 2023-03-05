@@ -2,6 +2,9 @@ import admin from '../views/admin.vue';
 import client from '../views/client.vue';
 import banner from '../components/banner.vue'
 import navbar from '../components/navbar.vue'
+import product from "../components/product.vue";
+import about from "../components/about.vue";
+import blog from "../components/blog.vue";
 
 import {createRouter,createWebHistory} from 'vue-router';
 const router = createRouter({
@@ -13,6 +16,9 @@ const router = createRouter({
         default: client,
         navbar, 
         banner, 
+        product,
+        about,
+        blog
 
       }
       },
