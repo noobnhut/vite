@@ -1,4 +1,4 @@
 <template>
     <p>client sadsadas</p> 
-    <a href="">ádasdasdasdasd</a>
+    <router-link to="/admin">ádasdasdasdasd</router-link>
 </template>
