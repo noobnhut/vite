@@ -4,12 +4,13 @@ import {createRouter,createWebHistory} from 'vue-router';
 const router = createRouter({
   history: createWebHistory(),
   routes: [ 
-    {
+     {
         path: '/',
         components: {
           default: client,        
         }, 
       },
+
       {
         path: '/admin',
         name:'admin',
