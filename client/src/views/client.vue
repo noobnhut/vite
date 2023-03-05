@@ -1,4 +1,10 @@
 <template>
-    <p>client sadsadas</p> 
-    <router-link to="/admin">admin</router-link>
+
+    <p>clientsdsadsa sadsadas</p> 
+    
+    <router-view/>
+
 </template>
+<script>
+import "../assets/client.css";
+</script>

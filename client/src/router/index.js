@@ -1,14 +1,20 @@
 import admin from '../views/admin.vue';
 import client from '../views/client.vue';
-import {createRouter,createWebHistory, useRoute} from 'vue-router';
+import banner from '../components/banner.vue'
+import navbar from '../components/navbar.vue'
+
+import {createRouter,createWebHistory} from 'vue-router';
 const router = createRouter({
   history: createWebHistory(),
   routes: [ 
     {
-        path: '/',
-        components: {
-          default: client,        
-        }, 
+      path: '/',
+      components: {
+        default: client,
+        navbar, 
+        banner, 
+
+      }
       },
       //admin
       {

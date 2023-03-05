@@ -1,5 +1,7 @@
+<template> 
+ <router-view name="navbar"/>
+ <router-view name="banner"/>
 
 
-<template>
  <router-view></router-view>
 </template>
