@@ -39,9 +39,7 @@
                     <a class="nav-link text-uppercase text-dark">VỀ CHÚNG TÔI</a>
                 </li>
 
-                <li class="nav-item px-2 py-2 border-0">
-                    <a class="nav-link text-uppercase text-dark">THÔNG TIN VỀ</a>
-                </li>
+             
 
                 <li class="nav-item dropdown px-2 py-2">
                     <a class="nav-link dropdown-toggle text-uppercase text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

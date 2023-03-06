@@ -5,7 +5,7 @@ import navbar from '../components/navbar.vue'
 import product from "../components/product.vue";
 import about from "../components/about.vue";
 import blog from "../components/blog.vue";
-
+import login from "../views/login.vue"
 import {createRouter,createWebHistory} from 'vue-router';
 const router = createRouter({
   history: createWebHistory(),
@@ -54,6 +54,13 @@ const router = createRouter({
         ],
      
       },
+      //login
+      {
+       path:'/login',
+       name:'login',
+       component:login
+      },
+      //register
   ],
 })
 export default router;
