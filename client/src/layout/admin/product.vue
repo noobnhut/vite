@@ -174,7 +174,7 @@ export default {
     async getproducts() {
       try {
         const result = await axios.get(
-          "https://www.404fn.online/server/public/api/product"
+          `${import.meta.env.VITE_API_BASE_URL}product`
         );
         this.products = result.data;
         console.log(result);
@@ -186,7 +186,7 @@ export default {
     async getcategorys() {
       try {
         const result = await axios.get(
-          "https://www.404fn.online/server/public/api/category"
+          `${import.meta.env.VITE_API_BASE_URL}category`
         );
         this.categorys = result.data;
         console.log(result);
@@ -199,7 +199,7 @@ export default {
       try {
         
         const product = await axios.post(
-          "https://www.404fn.online/server/public/api/add-product",
+          `${import.meta.env.VITE_API_BASE_URL}add-product`,
           {
             name_product: this.name_product,
             avatar: this.avatar,
@@ -216,7 +216,7 @@ export default {
     },
     async deleteproduct(id) {
       try {
-        await axios.delete('https://www.404fn.online/server/public/api/delete-product/' + id)
+        await axios.delete('${import.meta.env.VITE_API_BASE_URL}delete-product/' + id)
         this.reloadPage()
       } catch (error) {
         this.error = error.response.data

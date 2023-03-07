@@ -53,7 +53,7 @@ export default {
     {
         async login() {
           
-            axios.post(`http://127.0.0.1:8000/api/user/login?email=${this.email}&password=${this.password}`)
+            axios.post(`${import.meta.env.VITE_API_BASE_URL}user/login?email=${this.email}&password=${this.password}`)
                 .then( (response) =>{
                     if (response.status == 200) {
                          localStorage.setItem("user-info", JSON.stringify(response.data.name));

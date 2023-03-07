@@ -63,7 +63,7 @@ export default {
 		async register() {
 
 			const register = await axios.post(
-				`${process.env}register`,
+				`${import.meta.env.VITE_API_BASE_URL}register`,
 				{
 					name: this.name,
 					password: this.password,

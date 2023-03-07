@@ -52,7 +52,7 @@ export default {
     async getproducts() {
       try {
         const result = await axios.get(
-          "https://www.404fn.online/server/public/api/product"
+         `${import.meta.env.VITE_API_BASE_URL}product`
         );
         this.products = result.data;
         console.log(result);

@@ -153,7 +153,7 @@
       async getuser() {
         try {
           const result = await axios.get(
-            "https://www.404fn.online/server/public/api/user"
+            `${import.meta.env.VITE_API_BASE_URL}/user`
           );
           this.users = result.data;
           console.log(result);
@@ -165,7 +165,7 @@
       async storeuser() {
         try {
           const user = await axios.post(
-            "https://www.404fn.online/server/public/api/add-user",
+            `${import.meta.env.VITE_API_BASE_URL}/add-user`,
             {
               name: this.name,
               email: this.email,
@@ -178,7 +178,7 @@
       },
       async deleteuser(id) {
         try {
-          await axios.delete('https://www.404fn.online/server/public/api/delete-user/' + id)
+          await axios.delete('${import.meta.env.VITE_API_BASE_URL}/delete-user/' + id)
           this.reloadPage()
         } catch (error) {
           this.error = error.response.data

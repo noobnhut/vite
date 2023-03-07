@@ -6,7 +6,7 @@
           <div class="table-title">
             <div class="row">
               <div class="col-sm-6">
-                <h2>Quản lý danh mục sản phẩm</h2>
+                <h2>Quản lý danh mục sản phẩm </h2>
               </div>
             </div>
           </div>
@@ -114,9 +114,11 @@
       return {
        categorys: [],  
         selectcategory:'',
+       
       };
     },
     mounted() {
+    
       this.getcategory();
     },
     methods: {
@@ -131,7 +133,7 @@
       async getcategory() {
         try {
           const result = await axios.get(
-            `${process.env}/category"`
+            `${import.meta.env.VITE_API_BASE_URL}category`
           );
           this.categorys = result.data;
           console.log(result);
@@ -143,7 +145,7 @@
       async storecategory() {
         try {
           const category = await axios.post(
-            `${process.env}/add-category`,
+            `${import.meta.env.VITE_API_BASE_URL}add-category`,
             {
               cat_name: this.cat_name,
             }
@@ -156,7 +158,7 @@
 
      async deletecategory(id) {
       try {
-        await axios.delete(`${process.env}/delete-category/` + id)
+        await axios.delete(`${import.meta.env.API_BASE_URL}delete-category/` + id)
         this.reloadPage()
       } catch (error) {
         this.error = error.response.data
