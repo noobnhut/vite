@@ -1,7 +1,6 @@
 import admin from '../views/admin.vue';
 import client from '../views/client.vue';
 
-import navbar from '../components/navbar.vue'
 
 import {createRouter,createWebHistory} from 'vue-router';
 const router = createRouter({
@@ -9,10 +8,16 @@ const router = createRouter({
   routes: [ 
     {
       path: '/',
+      name:'home',
       components: {
-        default: client,
-        navbar,
-      },        
+        default: client, 
+      }, children:[
+        {
+          path:'cart',
+          name:'cart' ,
+          component:()=>import('../layout/client/cart.vue')
+        }
+      ],       
         
       },
       {

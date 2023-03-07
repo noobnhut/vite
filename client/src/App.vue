@@ -1,8 +1,4 @@
-<template> 
-  
- <router-view name="navbar"/>
-
- <router-view name="blog"/>
+<template>   
  <router-view></router-view>
 
 </template>

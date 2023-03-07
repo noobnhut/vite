@@ -131,7 +131,7 @@
       async getcategory() {
         try {
           const result = await axios.get(
-            "https://www.404fn.online/server/public/api/category"
+            `${process.env}/category"`
           );
           this.categorys = result.data;
           console.log(result);
@@ -143,7 +143,7 @@
       async storecategory() {
         try {
           const category = await axios.post(
-            "https://www.404fn.online/server/public/api/add-category",
+            `${process.env}/add-category`,
             {
               cat_name: this.cat_name,
             }
@@ -156,7 +156,7 @@
 
      async deletecategory(id) {
       try {
-        await axios.delete('https://www.404fn.online/server/public/api/delete-category/' + id)
+        await axios.delete(`${process.env}/delete-category/` + id)
         this.reloadPage()
       } catch (error) {
         this.error = error.response.data
