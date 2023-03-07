@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
     <div class="container">
-      <router-link to="/" class="navbar-brand d-flex justify-content-between align-items-center order-lg-0">
+      <router-link to="/admin" class="navbar-brand d-flex justify-content-between align-items-center order-lg-0">
         <img style="width:100px" src="../assets/logo.png" alt="site icon">
         <span class="text-uppercase fw-lighter ms-2">404KEY ADMIN</span>
       </router-link>
@@ -34,7 +34,7 @@
           <li class="nav-item px-2 py-2 border-0">
             <router-link :to="{ name: 'bill'}" class="nav-link text-uppercase text-dark">QUẢN LÝ HÓA ĐƠN</router-link>
           </li>
-          
+
         </ul>
       </div>
     </div>

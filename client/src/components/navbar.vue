@@ -25,16 +25,6 @@
                     <router-link to="/" class="nav-link text-uppercase text-dark">TRANG CHỦ</router-link>
                 </li>
 
-                <li class="nav-item dropdown px-2 py-2">
-                    <a class="nav-link dropdown-toggle text-uppercase text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     DANH SÁCH SẢN PHẨM
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item text-uppercase text-dark" >Something else here</a></li>
-                    </ul>
-                  </li>
-                
-                
                 <li class="nav-item px-2 py-2 border-0">
                     <a class="nav-link text-uppercase text-dark">VỀ CHÚNG TÔI</a>
                 </li>
@@ -46,8 +36,8 @@
                      TÀI KHOẢN
                     </a>
                     <ul class="dropdown-menu">
-                      <li> <router-link to="/" class="dropdown-item text-uppercase text-dark" >ĐĂNG NHẬP</router-link></li>
-                      <li> <router-link to="/" class="dropdown-item text-uppercase text-dark" >ĐĂNG KÝ</router-link></li>
+                      <li> <router-link :to="{ name: 'login_client'}" class="dropdown-item text-uppercase text-dark" >ĐĂNG NHẬP</router-link></li>
+                      <li> <router-link :to="{ name: 'register_client'}" class="dropdown-item text-uppercase text-dark" >ĐĂNG KÝ</router-link></li>
 
                     </ul>
                   </li>

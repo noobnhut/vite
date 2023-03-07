@@ -1,11 +1,8 @@
 import admin from '../views/admin.vue';
 import client from '../views/client.vue';
-import banner from '../components/banner.vue'
+
 import navbar from '../components/navbar.vue'
-import product from "../components/product.vue";
-import about from "../components/about.vue";
-import blog from "../components/blog.vue";
-import login from "../views/login.vue"
+
 import {createRouter,createWebHistory} from 'vue-router';
 const router = createRouter({
   history: createWebHistory(),
@@ -14,14 +11,20 @@ const router = createRouter({
       path: '/',
       components: {
         default: client,
-        navbar, 
-        banner, 
-        product,
-        about,
-        blog
-
-      }
+        navbar,
+      },        
+        
       },
+      {
+        path:'/login',
+        component:()=>import('../layout/client/login.vue'),
+        name:'login_client'
+   },
+       {
+        path:'/register',
+        component:()=>import('../layout/client/register.vue'),
+        name:'register_client'
+       },
       //admin
       {
         path: '/admin',
@@ -51,16 +54,19 @@ const router = createRouter({
           component:()=>import('../layout/admin/category.vue'),
           name:'category'
          },
+         {
+          path:'/login',
+          component:()=>import('../layout/admin/login.vue'),
+          name:'login'
+         },
+         {
+          path:'/register',
+          component:()=>import('../layout/admin/register.vue'),
+          name:'register'
+         },
         ],
      
       },
-      //login
-      {
-       path:'/login',
-       name:'login',
-       component:login
-      },
-      //register
   ],
 })
 export default router;
