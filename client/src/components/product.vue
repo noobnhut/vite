@@ -26,7 +26,7 @@
                 </small>
               </p>
               <!--@click="addCart(product.id)"-->
-              <button  @click="addCart(product.id)" class="btn btn-primary mt-3 position-relative "   >Mua hàng</button>
+              <button  @click="addCart(product.id)" class="btn btn-primary mt-3 position-relative " data-bs-toggle="modal" data-bs-target="#exampleModal"  >Mua hàng</button>
             </div>
 
           </div>
@@ -88,7 +88,6 @@ export default {
   },
   mounted() {
     this.getproducts(); 
-    this.getcart();
   },
   methods:
   {
