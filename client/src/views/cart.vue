@@ -65,8 +65,7 @@ export default
     {
         return{
             carts:[],
-            qty:""  ,
-          
+            qty:""  ,      
                 
         }
     },
