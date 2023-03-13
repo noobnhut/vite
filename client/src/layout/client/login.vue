@@ -32,9 +32,12 @@
             </div>
         </div>
     </div>
+    <cart/>
 </template>
 <script>
+
 export default {
+   
     data() {
         return {
             email: "",
@@ -50,22 +53,22 @@ export default {
      }
     },
     methods:
-    {
-        async login() {
-          
-            axios.post(`${import.meta.env.VITE_API_BASE_URL}user/login?email=${this.email}&password=${this.password}`)
-                .then( (response) =>{
-                    if (response.status == 200) {
-                         localStorage.setItem("user-info", JSON.stringify(response.data.name));
-                        // this.$router.push({ name: 'home' })
-                        this.$router.push({ name:'home'})
-        
-                         console.log('a')
-                    }
-                });
-
+    {       
+        async login()
+        {
+            const login = await axios.post(
+                `${import.meta.env.VITE_API_BASE_URL}user/login?email=${this.email}&password=${this.password}`
+            );
+            if(login.data.status==202)
+            {
+                localStorage.setItem("user-info", JSON.stringify(login.data.user));  
+                this.$router.push({ name:'home'})
+            }
+            else
+            {
+                alert('login that bai');
+            }
         }
-
     }
 }
 </script>
