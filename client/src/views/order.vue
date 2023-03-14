@@ -128,9 +128,7 @@ export default
                         {
                             id_user: a.id,
                             diachinguoinhan: this.address,
-                            sdt: this.numberphone,
-                            id_product:this.idproduct,
-                            product_qty:this.qty
+                            sdt: this.numberphone                          
                         }
                     );
                     if (order.data.status == 200) {

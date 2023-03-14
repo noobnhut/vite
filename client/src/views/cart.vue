@@ -41,7 +41,7 @@
                 </div>
             
                 <router-link class="btn" to="/order">Thanh toán</router-link>
-                <button class="btn" @click="update()">Cập nhập giỏ hàng</button>
+                <button class="btn" @click="updated()">Cập nhập giỏ hàng</button>
 
               
             </div>
@@ -146,8 +146,12 @@ export default
       }
      
     },
-     
+     updated()
+    {
+        location.reload()
+    }
     },
+    
 
 }
 </script>
